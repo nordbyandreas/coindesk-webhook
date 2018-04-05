@@ -26,12 +26,12 @@ server.post('/get-bitcoin-price', (req, res) => {
             if(currency == 'USD'){
                   dataToSend += `${data.USD}`;
             }
-            else if(currency == 'EUR'){
-                dataToSend += `${data.GBP}`;
-            }
-            else{
-                dataToSend += `${data.EUR}`;
-            }
+            // else if(currency == 'EUR'){
+            //     dataToSend += `${data.GBP}`;
+            // }
+            // else{
+            //     dataToSend += `${data.EUR}`;
+            // }
 
 
             return res.json({
