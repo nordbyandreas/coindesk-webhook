@@ -23,7 +23,7 @@ server.post('/get-bitcoin-price', (req, res) => {
             let dataToSend = 'Heres the info:';
 
 
-            dataToSend += `${data.USD.rate}`;
+            dataToSend += `${data.time.update}`;
 
 
 
