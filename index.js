@@ -12,7 +12,6 @@ server.use(bodyParser.json());
 
 
 server.post('/get-bitcoin-price', (req, res) => {
-    // const currency = req.body.result && req.body.result.parameters && req.body.result.parameters.currency-name ? req.body.result.parameters.currency-name : 'usd';
     const reqUrl = encodeURI(`https://api.coindesk.com/v1/bpi/currentprice.json`);
     http.get(reqUrl, (responseFromAPI) => {
         let completeResponse = '';
@@ -23,15 +22,9 @@ server.post('/get-bitcoin-price', (req, res) => {
             const data = JSON.parse(completeResponse);
             let dataToSend = 'Heres the info:';
 
-            // if(currency == 'USD'){
-            //       dataToSend += `${data.time.update}`;
-            // }
-            // else if(currency == 'EUR'){
-            //     dataToSend += `${data.GBP.symbol}`;
-            // }
-            // else{
-            //     dataToSend += `${data.EUR.rate}`;
-            // }
+
+            dataToSend += `${data.USD.rate}`;
+
 
 
             return res.json({
