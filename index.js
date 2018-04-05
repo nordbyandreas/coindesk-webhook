@@ -24,14 +24,14 @@ server.post('/get-bitcoin-price', (req, res) => {
             let dataToSend = 'Heres the info:';
 
             if(currency == 'USD'){
-                  dataToSend += `${data.USD}`;
+                  dataToSend += `${data.time.update}`;
             }
-            // else if(currency == 'EUR'){
-            //     dataToSend += `${data.GBP}`;
-            // }
-            // else{
-            //     dataToSend += `${data.EUR}`;
-            // }
+            else if(currency == 'EUR'){
+                dataToSend += `${data.GBP.symbol}`;
+            }
+            else{
+                dataToSend += `${data.EUR.rate}`;
+            }
 
 
             return res.json({
