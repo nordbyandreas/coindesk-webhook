@@ -4,8 +4,13 @@
   "description": "ardoq",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "runtests"
   },
   "author": "andreas nordby",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.1"
+  }
 }
