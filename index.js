@@ -11,7 +11,7 @@ server.use(bodyParser.urlencoded({
 server.use(bodyParser.json());
 
 
-server.post('/get-bitcoin-price', (req, res) => {
+server.get('/get-bitcoin-price', (req, res) => {
 
     const reqUrl = encodeURI(`https://api.coindesk.com/v1/bpi/currentprice.json`);
     http.get(reqUrl, (responseFromAPI) => {

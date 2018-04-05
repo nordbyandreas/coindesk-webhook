@@ -1,11 +1,16 @@
 {
-  "name": "y",
+  "name": "bitcoin-webhook",
   "version": "1.0.0",
-  "description": "ardoq",
+  "description": "ardoq assigment - coindesk api webhook",
   "main": "index.js",
+  "keywords": [
+        "bitcoin",
+        "ardoq",
+        "Andreas Nordby"
+    ],
   "scripts": {
     "start": "node index.js",
-    "test": "runtests"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "andreas nordby",
   "license": "ISC",
