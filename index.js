@@ -20,9 +20,8 @@ server.post('/get-bitcoin-price', (req, res) => {
         });
         responseFromAPI.on('end', () => {
             const data = JSON.parse(completeResponse);
-            let dataToSend = 'The price for 1 bitcoin is ';
+            let dataToSend = 'The price for 1 bitcoin is $';
 
-            dataToSend += `${data.bpi.USD.symbol}`;
             dataToSend += `${data.bpi.USD.rate}`;
             dataToSend += " right now.";
 
